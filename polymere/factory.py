@@ -1,6 +1,10 @@
 
 def processing_plant(chaine):
+    if not isinstance(chaine, str):
+        raise ValueError("Une chaîne de caractere doit être fournie en entrée !!!")
+    
     reactions = {}
+    
     for lettre in range(ord('a'), ord('z')+1):
         reactions[chr(lettre) + chr(lettre).upper()] = ''
         reactions[chr(lettre).upper() + chr(lettre)] = ''
