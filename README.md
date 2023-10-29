@@ -1,6 +1,6 @@
 # assement documentation
 
-## Pour lancer correctement l'api
+## Pour lancer correctement le projet
 - Cloner le dépôt GitHub: Vous devez doit cloner le dépôt GitHub sur votre machine machine
 
 - Installer Pipenv: Assurez-vous d'installer Pipenv. Vous Pouvez l'installer en utilisant la commande 'pip install pipenv'
