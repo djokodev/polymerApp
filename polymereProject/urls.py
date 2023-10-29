@@ -17,15 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from polymere.views import ReactionViewSet, HealthCheck
-
-router = DefaultRouter()
-router.register("reactions", ReactionViewSet)
-#router.register("health_check", HealthCheck)
+from polymere.views import HealthCheck, Polymers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include(router.urls)),
-    path("health_check/", HealthCheck.as_view()),
+    path("health_check/", HealthCheck.as_view(), name="health_check"),
+    path("polymers/", Polymers.as_view({'get': 'list', 'post': 'create'}), name="polymers"),
     path("api-auth/", include("rest_framework.urls")),
 ]

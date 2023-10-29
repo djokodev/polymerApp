@@ -6,10 +6,11 @@ name = "pypi"
 [packages]
 asgiref = "==3.7.2"
 django = "==4.1"
-djangorestframework = "==3.12.4"
+djangorestframework = "*"
 sqlparse = "==0.4.4"
 tzdata = "==2023.3"
 pytz = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

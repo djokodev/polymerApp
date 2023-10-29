@@ -1,7 +1,16 @@
+import re
+
 
 def processing_plant(chaine):
     if not isinstance(chaine, str):
         raise ValueError("Une chaîne de caractere doit être fournie en entrée !!!")
+    
+    if any(char.isdigit() for char in chaine):
+        raise ValueError("La chaîne ne doit pas contenir de chiffres !")
+    
+    special_characters = r"[^A-Za-z0-9]"
+    if re.search(special_characters, chaine):
+        raise ValueError("La chaîne ne doit pas contenir des caractères spéciaux ou des espaces")
     
     reactions = {}
     
