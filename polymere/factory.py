@@ -18,6 +18,8 @@ def processing_plant(chaine):
         reactions[chr(lettre) + chr(lettre).upper()] = ''
         reactions[chr(lettre).upper() + chr(lettre)] = ''
 
+    reaction_count = 0 
+
     while True:
         chaine_modifiee = False
 
@@ -25,8 +27,10 @@ def processing_plant(chaine):
             if reaction in chaine:
                 chaine = chaine.replace(reaction, remplacement)
                 chaine_modifiee = True
+                reaction_count += 1
 
         if not chaine_modifiee:
             break
 
-    return chaine
+    return chaine, reaction_count
+

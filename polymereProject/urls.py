@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from polymere.views import HealthCheck, Polymers
+from polymere.views import HealthCheck, Polymers, ReactedPolymer
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("health_check/", HealthCheck.as_view(), name="health_check"),
     path("polymers/", Polymers.as_view({'get': 'list', 'post': 'create'}), name="polymers"),
+    path("reactor/",ReactedPolymer.as_view({'get': 'list'}), name="reactor"),
     path("api-auth/", include("rest_framework.urls")),
+    path('api-token-auth/', views.obtain_auth_token, name="api-token-auth")
 ]
