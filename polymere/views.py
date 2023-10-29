@@ -34,6 +34,9 @@ class Polymers(viewsets.ModelViewSet):
   def create(self, request):
     if request.method == "POST":
       polymers = request.data
+
+      if not polymers:
+        return Response("Viellez fournir un corps a la requête !", status=status.HTTP_400_BAD_REQUEST)
        
       for polymer_entry in polymers:
         timestamp = polymer_entry.get("timestamp")
