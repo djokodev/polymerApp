@@ -8,10 +8,13 @@ from rest_framework import status
 from polymere import factory
 from dateutil.parser import isoparse
 from django.utils.timezone import make_aware
+from rest_framework.decorators import authentication_classes, permission_classes
 
 
 
 
+@authentication_classes([])
+@permission_classes([])
 class HealthCheck(APIView):
   def get(self, request):
       return Response({}, status=status.HTTP_200_OK)
