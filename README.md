@@ -2,6 +2,7 @@
 
 ## Pour lancer correctement le projet
 - Cloner le dépôt GitHub: Vous devez doit cloner le dépôt GitHub sur votre machine machine
+  ou telecharger le projet et l'extraire...
 
 - Installer Pipenv: Assurez-vous d'installer Pipenv. Vous Pouvez l'installer en utilisant la commande 'pip install pipenv'
 
@@ -40,6 +41,6 @@
 - type: GET, Endpoint: http://127.0.0.1:8000/reactor/, Authenticated: Authenticated
 ### Retourne un polymer réagi. ex: GET /reactor?start=2023-07-10T14:00:00Z&end=2023-07-20T23:59:59Z
 
-## NB: Pour pouvoir effectuer ces requettes vous aurez besoin d'autorisation, la seule requette public est http://127.0.0.1:8000/health_check/. Et donc pour cela avec les informations de votre compte utilisateur que vous avez cree, vous aller effectuer une requette post sur cette url : http://127.0.0.1:8000/api-token-auth/ avec le body remplis comme suit: {"username": "votre_nom_utilisateur", "password": "votre_password"}, vous recevrer un token qui vous permettra d'effectuer les requette qui requiere une autorisation.
+#### NB: Pour pouvoir effectuer ces requettes vous aurez besoin d'autorisation, la seule requette public est http://127.0.0.1:8000/health_check/. Et donc pour cela avec les informations de votre compte utilisateur que vous avez cree, vous aller effectuer une requette post sur cette url : http://127.0.0.1:8000/api-token-auth/ avec le body remplis comme suit: {"username": "votre_nom_utilisateur", "password": "votre_password"}, vous recevrer un token qui vous permettra d'effectuer les requette qui requiere une autorisation.
 - Et pour specifier cela quand vous effectuer une requette, vous allez juste dans l'onglet Authorization, type: API Key. Vous verer des lignes dans les quelles vous entrerer respectivement :
 1- Authorization, 2- Token "votre_token_generer.
