@@ -1,6 +1,5 @@
 import re
 
-
 def processing_plant(chaine):
     if not isinstance(chaine, str):
         raise ValueError("Une chaîne de caractere doit être fournie en entrée !!!")
@@ -33,4 +32,3 @@ def processing_plant(chaine):
             break
 
     return chaine, reaction_count
-

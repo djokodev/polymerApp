@@ -1,13 +1,11 @@
 from rest_framework import viewsets
 from .models import Polymer
-from datetime import datetime
 from .serializers import PolymerSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from polymere import factory
 from dateutil.parser import isoparse
-from django.utils.timezone import make_aware
 from rest_framework.decorators import authentication_classes, permission_classes
 
 
