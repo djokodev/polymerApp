@@ -1,4 +1,4 @@
-# assement documentation
+# Polymer documentation
 
 ## Pour lancer correctement le projet
 - Cloner le dépôt GitHub: Vous devez doit cloner le dépôt GitHub sur votre machine machine
